@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <title>Contact form</title>
+
+  <script src="assets/js/common.js" defer></script>
+
+</head>
+<body>
+  <main>
+    
+    <section class="contact-form">
+      <h1>Contact Us</h1>
+    
+      <form id="form" novalidate>
+        <div class="name-block">
+          <div class="name-input">
+            <label class="required" for="first-name">First Name</label>
+            <input id="first-name" name="first-name" type="text" aria-describedby="first-name-error" autocomplete="given-name" required>
+            <p id="first-name-error" class="error-text hidden">This field is required</p>
+          </div>
+          <div class="name-input">
+            <label class="required" for="last-name">Last Name</label>
+            <input id="last-name" name="last-name" type="text" aria-describedby="last-name-error" autocomplete="family-name" required>
+            <p id="last-name-error" class="error-text hidden">This field is required</p>
+          </div>
+        </div>
+
+        <label class="required" for="email-address">Email Address</label>
+        <input id="email-address" name="email-address" type="email" aria-describedby="email-address-error" autocomplete="email" required>
+        <p id="email-address-error" class="error-text hidden">This field is required</p>
+
+        <fieldset>
+          <legend class="required">Query Type</legend>
+
+          <div class="query-type-block">
+            <div class="query-type">
+              <div class="radio-container">
+                <input type="radio" id="general" name="enquiry-type" value="general" aria-describedby="enquiry-type-error" required>
+                <span class="radio"></span>
+              </div>
+              <label for="general">General Enquiry</label>
+            </div>
+            <div class="query-type">
+              <div class="radio-container">
+                <input type="radio" id="support" name="enquiry-type" value="support" aria-describedby="enquiry-type-error" >
+                <span class="radio"></span>
+              </div>
+              <label for="support">Support Request</label>
+            </div>
+          </div>
+          
+          <p id="enquiry-type-error" class="error-text hidden">Please select a query type</p>
+        </fieldset>
+
+        <label class="required" for="message">Message</label>
+        <textarea id="message" name="message" type="textarea" aria-describedby="message-error" required></textarea>
+        <p id="message-error" class="error-text hidden">This field is required</p>
+
+        <div class="consent-block">
+          <div class="checkbox-container">
+            <input id="consent" name="consent" type="checkbox" aria-describedby="consent-error" required>
+            <span class="checkbox"></span>
+          </div>
+          <label class="required" for="consent">I consent to being contacted by the team</label>
+        </div>
+        <p id="consent-error" class="error-text hidden">To submit this form, please consent to being contacted</p>
+    
+        <button id="submit-btn" type="submit">Submit</button>
+      </form>
+    </section>
+    
+  </main>
+
+    <div id="success-notification" class="success-notification hidden">
+      <h2><img class="success-icon" src="assets/images/icon-success-check.svg" alt=""> Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://christian-bell.com">Christian Bell</a>.
+    </div>
+  </footer>
+</body>
+</html>
